@@ -44,6 +44,17 @@ class Logica:
         Returns:
             bool: Resultado de NOT a
         """
+    
+        return a and b
+
+    def OR(self, a, b):
+        return a or b
+
+    def NOT(self, a):
+        return not a
+
+
+
         pass
     
     def XOR(self, a, b):
