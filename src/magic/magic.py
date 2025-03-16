@@ -259,6 +259,16 @@ class Magic:
         Returns:
             int: El mínimo común múltiplo de a y b
         """
+   
+        while b:
+            a, b = b, a % b
+        return abs(a)
+
+    def mcm(self, a, b):
+        return abs(a * b) // self.mcd(a, b) if a and b else 0
+
+
+
         pass
     
     def suma_digitos(self, n):
