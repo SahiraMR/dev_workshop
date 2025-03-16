@@ -41,14 +41,13 @@ class Data:
         Returns:
             list: Lista sin elementos duplicados
         """
+      
         lista_sin_duplicados = []
         for elemento in lista:
             if elemento not in lista_sin_duplicados:
                 lista_sin_duplicados.append(elemento)
         return lista_sin_duplicados
-    
-        pass
-    
+
     def merge_ordenado(self, lista1, lista2):
         """
         Combina dos listas ordenadas en una sola lista ordenada.
