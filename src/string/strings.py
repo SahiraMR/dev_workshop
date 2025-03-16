@@ -151,8 +151,15 @@ class Strings:
         Returns:
             bool: True si la cadena representa un número entero, False en caso contrario
         """
-        pass
-    
+ 
+        if not texto:
+            return False
+        if texto[0] in ('-', '+'):
+            texto = texto[1:]
+        return all('0' <= c <= '9' for c in texto)
+  
+    pass
+
     def cifrar_cesar(self, texto, desplazamiento):
         """
         Aplica el cifrado César a una cadena de texto.
