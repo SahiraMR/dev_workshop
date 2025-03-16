@@ -194,12 +194,7 @@ class Strings:
             str: Cadena descifrada
         """
   
-        return ''.join(
-            chr((ord(c) - ord('a') - desplazamiento) % 26 + ord('a')) if 'a' <= c <= 'z' else
-            chr((ord(c) - ord('A') - desplazamiento) % 26 + ord('A')) if 'A' <= c <= 'Z' else c
-            for c in texto
-        )
-
+      
    
         
         pass
@@ -215,4 +210,11 @@ class Strings:
         Returns:
             list: Lista con las posiciones iniciales de cada ocurrencia
         """
+
+        posiciones = []
+        for i in range(len(texto) - len(subcadena) + 1):
+            if texto[i:i + len(subcadena)] == subcadena:
+                posiciones.append(i)
+        return posiciones
+
         pass
