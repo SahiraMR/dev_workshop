@@ -1,3 +1,4 @@
+import math
 class Geometria:
     """
     Class with geometric exercises.
