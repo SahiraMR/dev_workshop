@@ -66,6 +66,54 @@ class Magic:
         Returns:
             list: Lista con los primeros n números de Fibonacci
         """
+     
+        return a and b
+
+    def OR(self, a, b):
+        return a or b
+
+    def NOT(self, a):
+        return not a
+
+    def XOR(self, a, b):
+        return a != b  # XOR devuelve True si los valores son diferentes
+
+    def NAND(self, a, b):
+        return not (a and b)  # NAND es la negación de AND
+
+    def NOR(self, a, b):
+        return not (a or b)  # NOR es la negación de OR
+
+    def XNOR(self, a, b):
+        return not (a != b)  # XNOR es la negación de XOR
+
+    def implicacion(self, a, b):
+        return (not a) or b  # La implicación lógica se define como ¬a ∨ b
+
+    def bi_implicacion(self, a, b):
+        return a == b  # La bi-implicación es verdadera cuando ambos valores son iguales
+
+    def fibonacci(self, n):
+        if n <= 0:
+            return 0
+        elif n == 1:
+            return 1
+        else:
+            a, b = 0, 1
+            for _ in range(n - 1):
+                a, b = b, a + b
+            return b
+
+    def secuencia_fibonacci(self, n):
+        if n <= 0:
+            return []
+        secuencia = [0, 1]
+        for _ in range(n - 2):
+            secuencia.append(secuencia[-1] + secuencia[-2])
+        return secuencia[:n]
+
+
+
         pass
     
     def es_primo(self, n):
