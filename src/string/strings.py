@@ -106,6 +106,9 @@ class Strings:
         Returns:
             int: Número de palabras en la cadena
         """
+
+        return len(texto.split())
+
         pass
     
     def palabras_mayus(self, texto):
