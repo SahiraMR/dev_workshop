@@ -316,4 +316,41 @@ class Magic:
         Returns:
             bool: True si es un cuadrado mágico, False en caso contrario
         """
-        pass
+    
+        if not matriz or any(len(fila) != len(matriz) for fila in matriz):
+            return False
+        
+        n = len(matriz)
+        suma_magica = sum(matriz[0]) 
+        
+        # Verifica las sumas de las filas y columnas
+        for i in range(n):
+            if sum(matriz[i]) != suma_magica or sum(matriz[j][i] for j in range(n)) != suma_magica:
+                return False
+        
+        # Verifica la suma de la diagonal principal
+        if sum(matriz[i][i] for i in range(n)) != suma_magica:
+            return False
+        
+        # Verifica la suma de la diagonal secundaria
+        if sum(matriz[i][n - i - 1] for i in range(n)) != suma_magica:
+            return False
+        
+        return True
+
+# Ejemplo de uso
+operacion = OperacionesLogicas()
+matriz_magica = [
+    [8, 1, 6],
+    [3, 5, 7],
+    [4, 9, 2]
+]
+matriz_no_magica = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+print(operacion.es_cuadrado_magico(matriz_magica))   # True
+print(operacion.es_cuadrado_magico(matriz_no_magica)) # False
+pass
