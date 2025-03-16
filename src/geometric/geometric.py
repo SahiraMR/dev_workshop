@@ -354,7 +354,10 @@ class Geometria:
         Returns:
             float: Área del polígono regular
         """
-        return (num_lados * lado ** 2) / (4 * math.tan(math.pi / num_lados))
+        if num_lados < 3 or lado <= 0 or apotema <= 0:
+          return None  # En lugar de lanzar un error, devuelve None
+    
+        return (num_lados * lado * apotema) / 2
 
         pass
     
