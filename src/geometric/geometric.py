@@ -286,7 +286,6 @@ class Geometria:
         Returns:
             float: Distancia entre los dos puntos
         """
-        return math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
         pass
     
     def punto_medio(self, x1, y1, x2, y2):
@@ -302,8 +301,6 @@ class Geometria:
         Returns:
             tuple: Coordenadas (x, y) del punto medio
         """
-        return ((x1 + x2) / 2, (y1 + y2) / 2)
-
         pass
     
     def pendiente_recta(self, x1, y1, x2, y2):
@@ -319,17 +316,22 @@ class Geometria:
         Returns:
             float: Pendiente de la recta
         """
-        return (y2 - y1) / (x2 - x1) if x2 != x1 else None
         pass
     
     def ecuacion_recta(self, x1, y1, x2, y2):
-    a = y2 - y1
-    b = x1 - x2
-    c = -(a * x1 + b * y1)
-    return a, b, c
-
-   
- 
+        """
+        Obtiene los coeficientes de la ecuación de una recta en la forma Ax + By + C = 0.
+        
+        Args:
+            x1 (float): Coordenada x del primer punto
+            y1 (float): Coordenada y del primer punto
+            x2 (float): Coordenada x del segundo punto
+            y2 (float): Coordenada y del segundo punto
+            
+        Returns:
+            tuple: Coeficientes (A, B, C) de la ecuación de la recta
+        """
+        pass
     
     def area_poligono_regular(self, num_lados, lado, apotema):
         """
@@ -343,8 +345,6 @@ class Geometria:
         Returns:
             float: Área del polígono regular
         """
-        
-
         pass
     
     def perimetro_poligono_regular(self, num_lados, lado):
