@@ -156,6 +156,28 @@ class Logica:
         Returns:
             bool: Resultado de a XNOR b
         """
+    
+        return a and b
+
+    def OR(self, a, b):
+        return a or b
+
+    def NOT(self, a):
+        return not a
+
+    def XOR(self, a, b):
+        return a != b  # XOR devuelve True si los valores son diferentes
+
+    def NAND(self, a, b):
+        return not (a and b)  # NAND es la negación de AND
+
+    def NOR(self, a, b):
+        return not (a or b)  # NOR es la negación de OR
+
+    def XNOR(self, a, b):
+        return not (a != b)  # XNOR es la negación de XOR
+
+
         pass
     
     def implicacion(self, a, b):
