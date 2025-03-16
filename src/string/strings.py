@@ -121,6 +121,9 @@ class Strings:
         Returns:
             str: Cadena con la primera letra de cada palabra en mayúscula
         """
+ 
+        return ' '.join(palabra.capitalize() for palabra in texto.split())
+
         pass
     
     def eliminar_espacios_duplicados(self, texto):
