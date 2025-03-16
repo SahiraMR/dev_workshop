@@ -68,6 +68,18 @@ class Logica:
         Returns:
             bool: Resultado de a XOR b
         """
+        
+        return a and b
+
+    def OR(self, a, b):
+        return a or b
+
+    def NOT(self, a):
+        return not a
+
+    def XOR(self, a, b):
+        return a != b  # XOR devuelve True si los valores son diferentes
+
         pass
     
     def NAND(self, a, b):
