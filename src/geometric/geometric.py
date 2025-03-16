@@ -354,7 +354,7 @@ class Geometria:
         Returns:
             float: Área del polígono regular
         """
-        return (num_lados * lado * apotema) / 2
+        return (num_lados * lado ** 2) / (4 * math.tan(math.pi / num_lados))
 
         pass
     
