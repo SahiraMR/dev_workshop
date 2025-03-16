@@ -30,6 +30,12 @@ class Strings:
         Returns:
             str: Cadena invertida
         """
+    
+        resultado = ""
+        for caracter in texto:
+            resultado = caracter + resultado  
+        return resultado
+
         pass
     
     def contar_vocales(self, texto):
