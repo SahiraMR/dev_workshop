@@ -83,6 +83,7 @@ class Geometria:
         Returns:
             float: Perímetro del triángulo
         """
+        return lado1 + lado2 + lado3
         pass
     
     def es_triangulo_valido(self, lado1, lado2, lado3):
