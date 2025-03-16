@@ -148,6 +148,19 @@ class Magic:
         Returns:
             list: Lista de números primos hasta n
         """
+       
+        if n < 2:
+            return False
+        for i in range(2, int(n ** 0.5) + 1):
+            if n % i == 0:
+                return False
+        return True
+
+    def generar_primos(self, n):
+        return [i for i in range(2, n + 1) if self.es_primo(i)]
+
+
+
         pass
     
     def es_numero_perfecto(self, n):
