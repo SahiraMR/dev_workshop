@@ -193,6 +193,13 @@ class Strings:
         Returns:
             str: Cadena descifrada
         """
+   
+        return ''.join(
+            chr((ord(c) - ord('a') - desplazamiento) % 26 + ord('a')) if 'a' <= c <= 'z' else
+            chr((ord(c) - ord('A') - desplazamiento) % 26 + ord('A')) if 'A' <= c <= 'Z' else c
+            for c in texto
+        )
+
         pass
     
     def encontrar_subcadena(self, texto, subcadena):
