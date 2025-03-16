@@ -335,6 +335,11 @@ class Geometria:
         Returns:
             tuple: Coeficientes (A, B, C) de la ecuación de la recta
         """
+        if x2 == x1:
+            return (1, 0, -x1)
+        m = (y2 - y1) / (x2 - x1)
+        c = y1 - m * x1
+        return (-m, 1, -c)
         pass
     
     def area_poligono_regular(self, num_lados, lado, apotema):
