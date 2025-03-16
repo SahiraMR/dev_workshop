@@ -37,6 +37,8 @@ class Geometria:
         Returns:
             float: Área del círculo
         """
+        return math.pi * radio ** 2
+    
         pass
     
     def perimetro_circulo(self, radio):
