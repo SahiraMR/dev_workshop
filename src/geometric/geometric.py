@@ -15,7 +15,13 @@ class Geometria:
         Returns:
             float: Área del rectángulo
         """
-        return base*altura
+   
+ 
+        if base <= 0 or altura <= 0:
+            return "Error: La base y la altura deben ser mayores que cero"
+        return base * altura
+
+        
     
     def perimetro_rectangulo(self, base, altura):
         """
