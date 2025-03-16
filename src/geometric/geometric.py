@@ -319,6 +319,7 @@ class Geometria:
         Returns:
             float: Pendiente de la recta
         """
+        return (y2 - y1) / (x2 - x1) if x2 != x1 else None
         pass
     
     def ecuacion_recta(self, x1, y1, x2, y2):
