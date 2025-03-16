@@ -134,7 +134,15 @@ class Data:
         Returns:
             bool: True si conjunto1 es subconjunto de conjunto2, False en caso contrario
         """
+   
+  
+        for elemento in conjunto1:
+            if elemento not in conjunto2:
+                return False
+        return True
+
         pass
+    
     
     def implementar_pila(self):
         """
