@@ -171,17 +171,14 @@ class Strings:
         Returns:
             str: Cadena cifrada
         """
+    
+        return ''.join(
+            chr((ord(c) - ord('a') + desplazamiento) % 26 + ord('a')) if 'a' <= c <= 'z' else
+            chr((ord(c) - ord('A') + desplazamiento) % 26 + ord('A')) if 'A' <= c <= 'Z' else c
+            for c in texto
+        )
+
  
-        cifrado = ""
-        for caracter in texto:
-            if 'a' <= caracter <= 'z':  
-                nuevo = chr((ord(caracter) - ord('a') + desplazamiento) % 26 + ord('a'))
-            elif 'A' <= caracter <= 'Z':  
-                nuevo = chr((ord(caracter) - ord('A') + desplazamiento) % 26 + ord('A'))
-            else:
-                nuevo = caracter  
-            cifrado += nuevo
-        return cifrado
 
         pass
     
