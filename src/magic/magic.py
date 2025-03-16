@@ -192,6 +192,20 @@ class Magic:
         Returns:
             list: Lista de listas que representa el triángulo de Pascal
         """
+    
+        if filas <= 0:
+            return []
+        triangulo = [[1]]
+        for i in range(1, filas):
+            fila = [1]
+            for j in range(1, i):
+                fila.append(triangulo[i - 1][j - 1] + triangulo[i - 1][j])
+            fila.append(1)
+            triangulo.append(fila)
+        return triangulo
+
+
+
         pass
     
     def factorial(self, n):
