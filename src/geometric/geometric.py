@@ -323,24 +323,13 @@ class Geometria:
         pass
     
     def ecuacion_recta(self, x1, y1, x2, y2):
-        """
-        Obtiene los coeficientes de la ecuación de una recta en la forma Ax + By + C = 0.
-        
-        Args:
-            x1 (float): Coordenada x del primer punto
-            y1 (float): Coordenada y del primer punto
-            x2 (float): Coordenada x del segundo punto
-            y2 (float): Coordenada y del segundo punto
-            
-        Returns:
-            tuple: Coeficientes (A, B, C) de la ecuación de la recta
-        """
-        if x2 == x1:
-            return (1, 0, -x1)
-        m = (y2 - y1) / (x2 - x1)
-        c = y1 - m * x1
-        return (-m, 1, -c)
-        pass
+    a = y2 - y1
+    b = x1 - x2
+    c = -(a * x1 + b * y1)
+    return a, b, c
+
+   
+ 
     
     def area_poligono_regular(self, num_lados, lado, apotema):
         """
@@ -354,10 +343,7 @@ class Geometria:
         Returns:
             float: Área del polígono regular
         """
-        if num_lados < 3 or lado <= 0 or apotema <= 0:
-          return None  # En lugar de lanzar un error, devuelve None
-    
-        return (num_lados * lado * apotema) / 2
+        
 
         pass
     
