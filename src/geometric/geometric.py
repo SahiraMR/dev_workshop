@@ -354,8 +354,7 @@ class Geometria:
         Returns:
             float: Área del polígono regular
         """
-        perimetro = num_lados * lado
-        return (perimetro * apotema) / 2
+        return (num_lados * lado * apotema) / 2
 
         pass
     
