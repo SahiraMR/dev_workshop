@@ -29,6 +29,9 @@ class Logica:
         Returns:
             bool: Resultado de a OR b
         """
+    
+        return a or b
+
         pass
     
     def NOT(self, a):
