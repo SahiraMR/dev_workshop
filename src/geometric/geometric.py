@@ -331,7 +331,12 @@ class Geometria:
         """
         Calcula la pendiente de una recta que pasa por dos puntos.
         """
-        
+        if not all(isinstance(i, (int, float)) for i in [x1, y1, x2, y2]):
+            raise ValueError("Todos los valores deben ser números (int o float)")
+
+        # Verificar si la pendiente es indefinida (división por cero)
+        if x1 == x2:
+            return None  # Pendiente indefinida (recta vertical)
 
         pass
     
