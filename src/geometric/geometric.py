@@ -273,7 +273,7 @@ class Geometria:
 
         pass
     
-    def distancia_entre_puntos(self, x1, y1, x2, y2):
+    #def distancia_entre_puntos(self, x1, y1, x2, y2):
         """
         Calcula la distancia euclidiana entre dos puntos en un plano 2D.
         
@@ -286,8 +286,16 @@ class Geometria:
         Returns:
             float: Distancia entre los dos puntos
         """
-        return math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
+    
+    def distancia_entre_puntos(self, x1: float, y1: float, x2: float, y2: float) -> float:
+        """
+       """
+        if not all(isinstance(i, (int, float)) for i in [x1, y1, x2, y2]):
+            raise ValueError("Todos los valores deben ser números (int o float)")
 
+        # Calcular la distancia
+        distancia = math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
+        return round(distancia, 5)
         pass
     
     def punto_medio(self, x1, y1, x2, y2):
@@ -323,9 +331,7 @@ class Geometria:
         """
         Calcula la pendiente de una recta que pasa por dos puntos.
         """
-        if x1 == x2:
-            raise ValueError("La pendiente es indefinida (división por cero)")
-        return (y2 - y1) / (x2 - x1)
+        
 
         pass
     
