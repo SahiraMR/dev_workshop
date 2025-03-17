@@ -319,6 +319,14 @@ class Geometria:
         Returns:
             float: Pendiente de la recta
         """
+    
+        """
+        Calcula la pendiente de una recta que pasa por dos puntos.
+        """
+        if x1 == x2:
+            raise ValueError("La pendiente es indefinida (división por cero)")
+        return (y2 - y1) / (x2 - x1)
+
         pass
     
     def ecuacion_recta(self, x1, y1, x2, y2):
