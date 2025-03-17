@@ -370,6 +370,7 @@ class Geometria:
         perimetro = num_lados * lado
         area = (perimetro * apotema) / 2
         return area
+    pass
 
     """
    
