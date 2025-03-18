@@ -171,25 +171,16 @@ class Strings:
         Returns:
             str: Cadena cifrada
         """
-    pass
-    
     def descifrar_cesar(texto, desplazamiento):
-     resultado = ""
-
-    for caracter in texto:
-        if caracter.isalpha():  # Verifica si es una letra
-            base = ord('A') if caracter.isupper() else ord('a')
-            resultado += chr((ord(caracter) - base - desplazamiento) % 26 + base)
-        else:
-            resultado += caracter  # Mantiene caracteres que no son letras
-
-     return resultado  # Asegurar que está alineado correctamente
-
-
+     return "".join(
+        chr((ord(c) - (ord('A') if c.isupper() else ord('a')) - desplazamiento) % 26 + (ord('A') if c.isupper() else ord('a')))
+        if c.isalpha() else c for c in texto
+    )
     pass
+
     
     def encontrar_subcadena(self, texto, subcadena):
-        """
+        """""
         Encuentra todas las posiciones de una subcadena en un texto sin usar find() o index().
         
         Args:
