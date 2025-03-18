@@ -173,8 +173,8 @@ class Strings:
         """
     pass
     
-def descifrar_cesar(texto, desplazamiento):
-    resultado = ""
+    def descifrar_cesar(texto, desplazamiento):
+     resultado = ""
 
     for caracter in texto:
         if caracter.isalpha():  # Verifica si es una letra
@@ -183,7 +183,7 @@ def descifrar_cesar(texto, desplazamiento):
         else:
             resultado += caracter  # Mantiene caracteres que no son letras
 
-    return resultado  # Asegurar que está alineado correctamente
+     return resultado  # Asegurar que está alineado correctamente
 
 
     pass
