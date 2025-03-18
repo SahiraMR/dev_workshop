@@ -162,7 +162,7 @@ class Strings:
 
     def cifrar_cesar(self, texto, desplazamiento):
         """
-        Aplica el cifrado César a una cadena de texto.
+       # Aplica el cifrado César a una cadena de texto.
         
         Args:
             texto (str): Cadena a cifrar
@@ -170,14 +170,33 @@ class Strings:
             
         Returns:
             str: Cadena cifrada
-        """
-    
-        return ''.join(
-            chr((ord(c) - ord('a') + desplazamiento) % 26 + ord('a')) if 'a' <= c <= 'z' else
-            chr((ord(c) - ord('A') + desplazamiento) % 26 + ord('A')) if 'A' <= c <= 'Z' else c
-            for c in texto
-        )
 
+        """
+   
+    resultado = []
+    for caracter in texto:
+        if 'a' <= caracter <= 'z':  # Minúsculas
+            nuevo_caracter = chr(((ord(caracter) - ord('a') + desplazamiento) % 26) + ord('a'))
+        elif 'A' <= caracter <= 'Z':  # Mayúsculas
+            nuevo_caracter = chr(((ord(caracter) - ord('A') + desplazamiento) % 26) + ord('A'))
+        else:
+            nuevo_caracter = caracter  # Mantiene otros caracteres sin cambios
+        resultado.append(nuevo_caracter)
+    
+    return "".join(resultado)
+
+   
+
+   
+
+   
+   
+
+
+
+
+    
+        
  
 
         pass

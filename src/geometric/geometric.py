@@ -366,11 +366,12 @@ class Geometria:
             
         Returns:
             float: Área del polígono regular
-        """
+        
         if num_lados < 3 or lado <= 0 or apotema <= 0:
          raise ValueError("El número de lados debe ser ≥ 3 y los valores deben ser positivos.")
     
         return (num_lados * lado * apotema) / 2
+        """
     pass
 
     
